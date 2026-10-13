@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT World - Інструменти</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f6f8; color: #333; }
+        header { background: #2c3e50; color: white; padding: 25px; text-align: center; }
+        nav { background: #34495e; position: sticky; top: 0; }
+        nav ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; }
+        nav li a { display: block; color: white; padding: 14px 20px; text-decoration: none; font-weight: bold; }
+        nav li a:hover, nav li a.active { background: #1abc9c; }
+        .container { display: flex; max-width: 1000px; margin: 20px auto; padding: 0 15px; gap: 20px; }
+        .sidebar { flex: 1; background: white; padding: 15px; border-radius: 6px; }
+        .main-content { flex: 3; background: white; padding: 20px; border-radius: 6px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background: #e9ecef; }
+        footer { background: #2c3e50; color: white; text-align: center; padding: 12px; margin-top: 30px; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Інструменти розробника</h1>
+        <p>Популярне програмне забезпечення</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="basics.html">Технології</a></li>
+            <li><a href="structures.html" class="active">Інструменти</a></li>
+            <li><a href="contacts.html">Про сайт</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Порада</h3>
+            <p>Використовуйте зручний редактор коду з підсвіткою синтаксису для швидшої розробки.</p>
+        </aside>
+
+        <main class="main-content">
+            <h2>Порівняння редакторів коду</h2>
+            <table>
+                <tr>
+                    <th>Назва</th>
+                    <th>Тип</th>
+                    <th>Особливість</th>
+                </tr>
+                <tr>
+                    <td>Visual Studio Code</td>
+                    <td>Безкоштовний</td>
+                    <td>Величезна кількість розширень</td>
+                </tr>
+                <tr>
+                    <td>WebStorm</td>
+                    <td>Платний</td>
+                    <td>Повна інтеграція для веб-розробників</td>
+                </tr>
+            </table>
+        </main>
+    </div>
+
+    <footer>
+        <p>Лабораторна робота №2 | Виконав ст. гр. 2КН-26б Мельник Кіріл</p>
+    </footer>
+
+</body>
+</html>

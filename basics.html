@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT World - Технології</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f6f8; color: #333; }
+        header { background: #2c3e50; color: white; padding: 25px; text-align: center; }
+        nav { background: #34495e; position: sticky; top: 0; }
+        nav ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; }
+        nav li a { display: block; color: white; padding: 14px 20px; text-decoration: none; font-weight: bold; }
+        nav li a:hover, nav li a.active { background: #1abc9c; }
+        .container { display: flex; max-width: 1000px; margin: 20px auto; padding: 0 15px; gap: 20px; }
+        .sidebar { flex: 1; background: white; padding: 15px; border-radius: 6px; }
+        .main-content { flex: 3; background: white; padding: 20px; border-radius: 6px; }
+        footer { background: #2c3e50; color: white; text-align: center; padding: 12px; margin-top: 30px; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Основні Веб-Технології</h1>
+        <p>Базові складові сучасного інтернету</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="basics.html" class="active">Технології</a></li>
+            <li><a href="structures.html">Інструменти</a></li>
+            <li><a href="contacts.html">Про сайт</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Коротко</h3>
+            <ul>
+                <li><b>HTML5</b> - структура</li>
+                <li><b>CSS3</b> - дизайн</li>
+                <li><b>JS</b> - динаміка</li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <h2>Огляд технологій</h2>
+            <h3>1. HTML (HyperText Markup Language)</h3>
+            <p>Мова розмітки, яка відповідає за каркас сторінки: заголовки, параграфи, списки та посилання.</p>
+            
+            <h3>2. CSS (Cascading Style Sheets)</h3>
+            <p>Таблиці стилів, що задають кольори, шрифти, відступи та сітки розташування елементів.</p>
+        </main>
+    </div>
+
+    <footer>
+        <p>Лабораторна робота №2 | Виконав ст. гр. 2КН-26б Мельник Кіріл</p>
+    </footer>
+
+</body>
+</html>

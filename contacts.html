@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT World - Про сайт</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f6f8; color: #333; }
+        header { background: #2c3e50; color: white; padding: 25px; text-align: center; }
+        nav { background: #34495e; position: sticky; top: 0; }
+        nav ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; }
+        nav li a { display: block; color: white; padding: 14px 20px; text-decoration: none; font-weight: bold; }
+        nav li a:hover, nav li a.active { background: #1abc9c; }
+        .container { display: flex; max-width: 1000px; margin: 20px auto; padding: 0 15px; gap: 20px; }
+        .sidebar { flex: 1; background: white; padding: 15px; border-radius: 6px; }
+        .main-content { flex: 3; background: white; padding: 20px; border-radius: 6px; }
+        footer { background: #2c3e50; color: white; text-align: center; padding: 12px; margin-top: 30px; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Про сайт та зворотний зв'язок</h1>
+        <p>Інформація про навчальний проект</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="basics.html">Технології</a></li>
+            <li><a href="structures.html">Інструменти</a></li>
+            <li><a href="contacts.html" class="active">Про сайт</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Інфо</h3>
+            <p>Сайт є навчальним проектом з дисципліни «Веб-технології».</p>
+        </aside>
+
+        <main class="main-content">
+            <h2>Про проект</h2>
+            <p>Даний сайт створений для демонстрації навичок верстки багатосторінкових веб-ресурсів за допомогою HTML та CSS[cite: 1].</p>
+            <p><b>Студент:</b> Мельник Кіріл (гр. 2КН-26б)</p>
+        </main>
+    </div>
+
+    <footer>
+        <p>Лабораторна робота №2 | Виконав ст. гр. 2КН-26б Мельник Кіріл</p>
+    </footer>
+
+</body>
+</html>

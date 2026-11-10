@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT World - Анімація JS</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f4f7f6; color: #333; }
+        header { background: linear-gradient(135deg, #2c3e50, #3498db); color: white; padding: 30px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        nav { background: #1a252f; position: sticky; top: 0; z-index: 100; }
+        nav ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; flex-wrap: wrap; }
+        nav li a { display: block; color: #ecf0f1; padding: 14px 20px; text-decoration: none; font-weight: 600; transition: background 0.3s ease; }
+        nav li a:hover, nav li a.active { background: #3498db; color: white; }
+        
+        .container { max-width: 900px; margin: 30px auto; padding: 25px; background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); text-align: center; }
+        
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            margin: 30px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: transform 0.1s linear, background-color 0.3s ease;
+        }
+
+        .controls { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 20px; }
+        .btn {
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .btn:hover { background-color: #3498db; }
+        footer { background: #2c3e50; color: #bdc3c7; text-align: center; padding: 15px; margin-top: 40px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>IT World: JavaScript Анімація</h1>
+        <p>Лабораторна робота №5 — Керування анімацією елементів</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="basics.html">Технології</a></li>
+            <li><a href="structures.html">Інструменти</a></li>
+            <li><a href="js-anim.html" class="active">JS Анімація</a></li>
+            <li><a href="contacts.html">Про сайт</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2>Інтерактивне керування кубиком</h2>
+        <p>Натискайте кнопки нижче, щоб запускати, зупиняти або змінювати анімацію елемента за допомогою JavaScript.</p>
+        
+        <div id="box"></div>
+
+        <div class="controls">
+            <button class="btn" onclick="startAnimation()">▶ Старт</button>
+            <button class="btn" onclick="stopAnimation()">⏸ Стоп</button>
+            <button class="btn" onclick="changeColor()">🎨 Змінити колір</button>
+            <button class="btn" onclick="resetAnimation()">🔄 Скинути</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 IT World. Виконав студент групи 2КН-26б Мельник К.В.</p>
+    </footer>
+
+    <script>
+        let box = document.getElementById('box');
+        let timerId = null;
+        let angle = 0;
+
+        function startAnimation() {
+            if (timerId !== null) return;
+            timerId = setInterval(function() {
+                angle += 5;
+                box.style.transform = 'rotate(' + angle + 'deg)';
+            }, 30);
+        }
+
+        function stopAnimation() {
+            clearInterval(timerId);
+            timerId = null;
+        }
+
+        function changeColor() {
+            let colors = ['#e74c3c', '#2ecc71', '#f1c40f', '#9b59b6', '#e67e22', '#1abc9c'];
+            let randomColor = colors[Math.floor(Math.random() * colors.length)];
+            box.style.backgroundColor = randomColor;
+        }
+
+        function resetAnimation() {
+            stopAnimation();
+            angle = 0;
+            box.style.transform = 'rotate(0deg)';
+            box.style.backgroundColor = '#3498db';
+        }
+    </script>
+</body>
+</html>
